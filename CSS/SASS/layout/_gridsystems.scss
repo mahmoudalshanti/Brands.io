@@ -1,0 +1,47 @@
+@use '../helpers/variables' as *;
+@use '../helpers/functions' as *;
+@use '../helpers/mixins' as *;
+// fonts
+@font-face {
+    font-family:G-bold;
+    src: url(/CSS/Gilroy-Bold.ttf);
+}
+@font-face {
+    font-family:G-light;
+    src: url(/CSS/Gilroy-Light.ttf);
+}
+@font-face {
+    font-family:G-meduim;
+    src: url(/CSS/Gilroy-Bold.ttf);
+}
+
+// Responsive 
+body{
+    padding: 0;
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    @media ($minSmall) {
+      width: 750px;
+    } 
+    @media ($minMeduim) {
+      width: 970px;
+    } 
+    @media ($minLarge) {
+      width: 1170px;
+    } 
+    padding: 0 15px;  
+    margin:  0 auto;
+}
+

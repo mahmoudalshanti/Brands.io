@@ -1,0 +1,102 @@
+@use '../helpers/variables' as *;
+@use '../helpers/functions' as *;
+@use '../helpers/mixins' as *;
+
+.offer{
+    margin-top: 120px;
+    overflow: hidden;
+    .sec-container{
+        max-width: 920px; 
+        margin: 0 auto;
+        padding: 0 15px;
+        >{
+            .main-heading{
+                max-width: 652px;
+                margin: 0 auto;
+                text-align: center;
+                   
+                > h1{
+                    @include fonts(light);
+                    font-size: 60px;
+                    color: $secColor;
+                    margin-bottom: 15px;
+                }
+                > p{
+                    font-size: 20px;
+                    color: $secColor;
+                    @include fonts(light);
+                    line-height: 1.6;
+                }
+            }
+        }
+        > .offer-sec{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+             margin-top: 90px;
+            > .box{
+                flex-basis: 31.5%;
+                margin-bottom: 40px;
+                background-color: #ffffff;
+                border-radius:7px;
+                box-shadow: 0px 1.04px 4.96px 0px #00000015;
+                padding: 36px 0 41px 35px;
+                transition: .2s;
+                position: relative;
+                cursor: pointer;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    height: 2px;
+                    background-color: $secColor;
+                    transform:scaleX(0);
+                    transition: transform  .5s ease-in-out;
+                }
+                &:hover{
+                    transform:  scale(1.05);
+                }
+                &:hover::before{
+                    transform:  scaleX(1);
+                }
+                @include screen(meduim){
+                  flex-basis: 48.5%;
+                }
+                @include screen(small){
+                  flex-basis: 100%;
+                }
+                > {
+                    .icon{
+                        width:60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        -webkit-border-radius: 50%;
+                        -moz-border-radius: 50%;
+                        -ms-border-radius: 50%;
+                        -o-border-radius: 50%;
+                        background-color: #ECEEFF;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 31px;
+                 }
+                  h2{
+                    @include fonts(light);
+                    margin-bottom: 10px;
+                    color: $secColor;
+                    font-size: 20px;
+                 }
+                 p{
+                    color: $secColor;
+                    max-width: 212px;
+                    @include fonts(light);
+                    line-height: 1.4;
+                 }
+                }
+            }
+        }
+        
+    }
+}

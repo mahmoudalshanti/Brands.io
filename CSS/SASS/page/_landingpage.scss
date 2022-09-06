@@ -1,0 +1,113 @@
+@use '../helpers/variables' as *;
+@use '../helpers/functions' as *;
+@use '../helpers/mixins' as *;
+
+.landing-page{
+    margin-top: 80px;
+    overflow: hidden;
+    position: relative;
+    > .abs {
+      position: absolute;
+      top: 0.17px;
+      left: -47.79px;
+      @media ($maxSmall) {
+        top:-35.17px;
+        left: -47.79px;
+     }
+    }
+    .land-sec{
+        margin-left: 155px;
+        @media ($maxSmall) {
+            margin-left: 20px;
+         }
+        height: 605px; 
+        position: relative;
+        display: flex;
+        align-items: center;
+        >{
+            .right-side{
+                flex: 1;
+                display: flex;
+                @media (max-width:1115px) {
+                    display: none;
+                }
+              > img{
+                width: 70%;
+                position: absolute;
+                right: -110px;
+                top: -65px;
+            }
+              
+            }
+            .left-side{
+                flex-basis: 50%;
+                @media (max-width:1115px) {
+                   flex-basis: 100%;
+                }
+                > .text{
+                     margin-bottom: 70px;
+                     color: $mainColor;
+                    > h1{
+                        font-size: 85px;
+                        @include fonts(bold);
+                        margin-bottom: 13px;
+                        @media (max-width:767px) {
+                            font-size: 50px;
+                         }
+                    }
+                    > p{
+                        max-width: 527px;
+                        line-height: 1.6;
+                    }
+                }
+
+                > .btn{
+                > button{
+                    width: 180px;
+                    padding: 24px 0;
+                    border-radius: 7px;
+                    border: none;
+                    outline: none;
+                    text-transform: capitalize;
+                    font-size: 15px;
+                    cursor: pointer;
+                    margin-bottom: 10px;
+                    &:nth-child(1){
+                    background-color: $secColor;
+                    color: #fff;
+                    transition:.2s;
+                    &:hover{
+                        background-color: #fff;
+                        border: 1px solid $secColor;
+                        color: $secColor;
+                    }
+                    }
+                    &:nth-child(2){
+                    background-color: #fff;
+                    border: 1px solid $secColor;
+                    color: $secColor;
+                    margin-left: 10px;
+                    @media (max-width:767px) {
+                        margin-left: 0;
+                     }
+                    transition:.2s;
+                    &:hover{
+                        background-color: $mainColor;
+                        color: #fff;
+                    }
+                    }
+                  }
+                }
+            }
+        }
+    }
+}
+.rect{
+    position: absolute;
+    left: 0;
+    top: 340px;
+    z-index: -1;
+    img{
+        width: 100%;
+    }
+}

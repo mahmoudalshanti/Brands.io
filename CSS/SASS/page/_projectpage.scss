@@ -1,0 +1,88 @@
+@use '../helpers/variables' as *;
+@use '../helpers/functions' as *;
+@use '../helpers/mixins' as *;
+
+.projectpage{
+    overflow: hidden;
+    background-color: #F8F3FF;
+    padding: 70px 0;
+    margin-top: 140px;
+    .sec-container{
+        max-width: 852px;
+        padding: 0 15px;
+        margin: 0 auto;
+        > {
+            .data{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 62px;
+                @media ($maxSmall) {
+                     flex-direction: column;
+                     align-items: center;
+                }
+                > .box {
+                    @media ($maxSmall) {
+                        margin-bottom: 50px;
+                        &:nth-child(3){
+                            margin: 0;
+                        }
+                    }
+                    p{
+                        font-size: 60px;
+                        @include fonts(light);
+                        color: $secColor;
+                        text-align: center;
+                        @media ($maxSmall) {
+                            font-size: 40px;
+                       }
+                    }
+                    span{
+                        text-align: center;
+                        font-size: 20px;
+                        @include fonts(light);
+                        color: $secColor;
+                        display: block;
+                    }
+                }
+            }
+           .pros {
+              h1 {
+                font-size: 60px;
+                @include fonts(light);
+                color: $secColor;
+                text-align: center
+              }
+              p { 
+                @include fonts(light);
+                color: $secColor;
+                 font-size: 20px;  
+                 max-width: 594px;
+                 text-align: center;
+                 margin:  15px auto 0;
+                 line-height: 1.6;
+              }
+              button{
+                width: 180px;
+                padding: 24px 0;
+                border-radius: 7px;
+                border: none;
+                outline: none;
+                text-transform: capitalize;
+                font-size: 15px;
+                cursor: pointer;
+                margin-bottom: 10px;
+                background-color: $secColor;
+                color: #ffffff;
+                margin: 40px auto 0;
+                display: block;
+                transition: .2s;
+                &:hover{
+                    background-color: #ffffff;
+                    border: 1px solid $secColor;
+                    color: $secColor;
+                }
+               }
+           }
+        }
+    }
+}

@@ -1,0 +1,90 @@
+@use '../helpers/variables' as *;
+@use '../helpers/functions' as *;
+@use '../helpers/mixins' as *;
+
+.workspage{
+  overflow: hidden;
+  margin-top: 121px;
+  position: relative;
+  .rectright{
+    position: absolute;
+    left: -900px;
+    top:-200px;
+    z-index: -1;
+    @include screen(small){
+     display: none;
+  }
+   > img {
+      width: 80%;
+    }
+  }
+  .rectleft{
+    position: absolute;
+    right: -1000px;
+    top:500px;
+    z-index: -1;
+    @include screen(small){
+      display: none;
+   }
+   > img {
+      width: 80%;
+    }
+  }
+
+  > .sec-container{
+    max-width: 1070.15px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    @include screen(small){
+        flex-direction: column;
+    }
+    > {
+        .left-side{
+            flex-basis: 40%;
+            @include screen(small){
+                margin-bottom: 60px;
+            }
+            > .text {
+                margin-bottom: 71px;
+                margin-left: 20px;
+                h1 {
+                   text-transform: capitalize;
+                   color: $secColor;
+                   margin-bottom: 20px;
+                   @include fonts(light);
+                   font: {
+                       size: 60px;
+                   }
+               }
+               p {
+                 font-size: 16px;
+                 line-height: 1.6;
+                 max-width: 434px;
+                 color: $secColor;
+               }
+           }
+          > .box{
+             flex-basis:100%;
+             > img{
+                width: 100%;
+             }
+          }
+        }
+        .right-side{
+            flex-basis:40%;
+            > .box{
+                &:nth-child(2){
+                    margin-top: 60px;
+                }
+               img {
+                width: 100%;
+              }
+            }
+        }
+    }
+  }
+}

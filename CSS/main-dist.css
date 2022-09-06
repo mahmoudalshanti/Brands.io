@@ -1,0 +1,43 @@
+@font-face {
+  font-family: G-bold;
+  src: url(/CSS/Gilroy-Bold.ttf);
+}
+@font-face {
+  font-family: G-light;
+  src: url(/CSS/Gilroy-Light.ttf);
+}
+@font-face {
+  font-family: G-meduim;
+  src: url(/CSS/Gilroy-Bold.ttf);
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+@media (min-width:768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width:992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width:1200px) {
+  .container {
+    width: 1170px;
+  }
+}

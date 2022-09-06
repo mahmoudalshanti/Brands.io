@@ -1,0 +1,37 @@
+@use '../helpers/variables' as *;
+@use '../helpers/functions' as *;
+@use '../helpers/mixins' as *;
+
+.section-logos{
+    margin-top: 140px;
+    overflow: hidden;
+    > .sec-container{
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media ($maxSmall) {
+        flex-direction: column;
+    }
+     > div{
+        margin: 0 10px;
+        margin-bottom: 20px;
+        @media ($maxSmall) {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 100px;
+        }
+      > img{
+        width: 100%;
+        @media ($maxSmall) {
+            width: 50%;
+            
+        }
+      }
+     }
+    }
+}
